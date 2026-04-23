@@ -1,0 +1,40 @@
+@WareHouseInventoryApi_HostAddress = https://localhost:7003
+
+### Get all products (zatiaľ prázdny list)
+GET {{WareHouseInventoryApi_HostAddress}}/api/products
+
+### Create a product
+POST {{WareHouseInventoryApi_HostAddress}}/api/products
+Content-Type: application/json
+
+{
+  "name": "Kladivo",
+  "price": 9.99,
+  "stockQuantity": 10
+}
+
+### Get by id (po vytvorení)
+GET {{WareHouseInventoryApi_HostAddress}}/api/products/1
+
+### Update
+PUT {{WareHouseInventoryApi_HostAddress}}/api/products/1
+Content-Type: application/json
+
+{
+  "name": "Kladivo veľké",
+  "price": 14.99,
+  "stockQuantity": 5
+}
+
+### Validácia — negatívna cena (musí dať 400)
+POST {{WareHouseInventoryApi_HostAddress}}/api/products
+Content-Type: application/json
+
+{
+  "name": "Skrutka",
+  "price": -1,
+  "stockQuantity": 100
+}
+
+### 404 na neexistujúci id
+GET {{WareHouseInventoryApi_HostAddress}}/api/products/9999

@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="WareHouseInventory.Api/WareHouseInventory.Api.csproj" />
+  <Project Path="WareHouseInventory.Tests/WareHouseInventory.Tests.csproj" Id="0b492f32-aac3-49af-8791-ede579d44648" />
+</Solution>
